@@ -8,7 +8,7 @@ from .predictor import Predictor
 from .config import mobilenetv1_ssd_config as config
 
                
-def create_mobilenetv2_ssd(num_classes, width_mult=1.0, use_batch_norm=True, is_test=False):
+def create_mobilenetv2_ssd(num_classes, width_mult=1.0, use_batch_norm=True, onnx_compatible=False, is_test=False):
     base_net = MobileNetV2(width_mult=width_mult, use_batch_norm=use_batch_norm,
                            onnx_compatible=onnx_compatible).features
 
